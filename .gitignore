@@ -1,0 +1,11 @@
+# Temporary build scripts
+*.ps1
+build_*.js
+process_*.js
+run_curation_node.js
+run_curation.ps1
+curate_photos.js
+
+# OS metadata
+.DS_Store
+Thumbs.db
