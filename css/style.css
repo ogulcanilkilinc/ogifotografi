@@ -909,9 +909,9 @@ section { padding: 120px clamp(20px, 5vw, 56px); max-width: var(--max-w); margin
 .footer-brand .brand { font-size: 24px; }
 .footer-brand .brand-logo-img {
   height: auto;
-  max-height: 85px;
+  max-height: 64px;
   width: auto;
-  max-width: 340px;
+  max-width: 255px;
   display: block;
 }
 .footer-tagline {
