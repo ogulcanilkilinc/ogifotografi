@@ -341,6 +341,25 @@ section { padding: 120px clamp(20px, 5vw, 56px); max-width: var(--max-w); margin
   margin: 0 0 14px;
 }
 .section-sub { color: var(--steel); font-size: 16px; margin: 0; }
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-links svg,
+.footer-col svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  stroke: currentColor;
+  transition: transform 0.25s ease;
+}
+
+.social-links a:hover svg,
+.footer-col a:hover svg {
+  transform: scale(1.15);
+}
 .back-home {
   display: inline-block;
   margin-top: 18px;
