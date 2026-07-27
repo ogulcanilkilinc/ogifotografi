@@ -219,4 +219,21 @@ document.addEventListener('DOMContentLoaded', () => {
       window.instgrm.Embeds.process();
     }
   });
+
+  // ---- 9. Floating Yukarı Çık (Scroll to top) Butonu ----
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 });
