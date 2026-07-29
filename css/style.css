@@ -858,6 +858,18 @@ section { padding: 120px clamp(20px, 5vw, 56px); max-width: var(--max-w); margin
   text-transform: uppercase;
   color: var(--steel);
 }
+.req-star {
+  color: var(--accent);
+  margin-left: 2px;
+  font-weight: 700;
+}
+.opt-label {
+  font-size: 10px;
+  color: var(--steel-dim);
+  text-transform: none;
+  letter-spacing: normal;
+  margin-left: 4px;
+}
 .field input, .field textarea {
   background: var(--panel);
   border: 1px solid var(--line);
