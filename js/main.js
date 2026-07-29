@@ -236,4 +236,33 @@ document.addEventListener('DOMContentLoaded', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
+
+  // ---- 10. E-posta linkleri için otomatik kopyalama ve Toast bildirimi ----
+  let toastEl = document.getElementById('toastNotification');
+  if (!toastEl) {
+    toastEl = document.createElement('div');
+    toastEl.id = 'toastNotification';
+    toastEl.className = 'toast-notification';
+    document.body.appendChild(toastEl);
+  }
+
+  function showToast(message) {
+    toastEl.textContent = message;
+    toastEl.classList.add('show');
+    setTimeout(() => {
+      toastEl.classList.remove('show');
+    }, 3200);
+  }
+
+  const mailLinks = document.querySelectorAll('a[href^="mailto:"]');
+  mailLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const email = link.getAttribute('href').replace('mailto:', '');
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(email).then(() => {
+          showToast('✓ E-posta kopyalandı: ' + email);
+        }).catch(() => {});
+      }
+    });
+  });
 });
